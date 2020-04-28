@@ -21,12 +21,11 @@ public class Getdata extends AppCompatActivity {
 
     public static final int LOAD_SUCCESS = 101;
 
-    private String SEARCH_URL = "http://175.208.85.188:8421/AG1/1";
+    private String SEARCH_URL = "http://175.208.85.188:8421/ANgetRecentData/1";
     private String REQUEST_URL = SEARCH_URL;
 
     private ProgressDialog progressDialog;
     private TextView textviewJSONText;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,8 +48,6 @@ public class Getdata extends AppCompatActivity {
             }
         });
     }
-
-
 
     private final MyHandler mHandler = new MyHandler(this);
 
@@ -81,9 +78,6 @@ public class Getdata extends AppCompatActivity {
             }
         }
     }
-
-
-
 
     public void  getJSON() {
 
