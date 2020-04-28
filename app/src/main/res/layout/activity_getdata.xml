@@ -1,0 +1,25 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textview_main_jsontext"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.9"
+        android:layout_margin="15dp"
+        android:padding="15dp"
+        android:maxLines="100"
+        android:text="출력공간"
+        android:singleLine="false"
+        android:scrollbars="vertical"
+        android:scrollHorizontally="false"/>
+
+    <Button
+        android:id="@+id/button_main_requestjson"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        android:text="값 확인하기" />
+</LinearLayout>
