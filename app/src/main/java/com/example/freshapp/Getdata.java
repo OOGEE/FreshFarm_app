@@ -3,7 +3,6 @@ import android.app.ProgressDialog;
 import android.os.Handler;
 import android.os.Message;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -113,8 +112,6 @@ public class Getdata extends AppCompatActivity {
                 String result;
 
                 try {
-
-                    Log.d("hh", REQUEST_URL);
                     URL url = new URL(REQUEST_URL);
                     HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
 

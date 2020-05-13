@@ -6,21 +6,56 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/button_get"
+    <Spinner
+        android:id="@+id/MainSpin"
+        android:entries="@array/main_num"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.1"
-        android:text="값 확인하기"
-        android:onClick="onGetButtonClick"/>
+        android:layout_height="20dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true" />
 
-    <Button
-        android:id="@+id/button_push"
+    <TextView
+        android:id="@+id/main_lux"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="20dp" />
+
+    <TextView
+        android:id="@+id/main_temp"
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+    <TextView
+        android:id="@+id/main_hum"
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+    <TextView
+        android:id="@+id/main_g_hum"
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_weight="0.1"
-        android:text="값 입력하기"
-        android:onClick="onPussButtonClick"/>
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button_get"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1"
+            android:onClick="onGetButtonClick"
+            android:text="값 확인하기" />
+
+        <Button
+            android:id="@+id/button_push"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1"
+            android:onClick="onPussButtonClick"
+            android:text="값 입력하기" />
+    </LinearLayout>
 
 
 </LinearLayout>
