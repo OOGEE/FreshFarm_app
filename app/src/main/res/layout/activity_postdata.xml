@@ -67,5 +67,5 @@
         android:layout_height="wrap_content"
         android:onClick="onClick1"
         android:layout_margin="10dp"
-        android:text="Button" />
+        android:text="설정하기" />
 </LinearLayout>

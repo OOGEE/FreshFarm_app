@@ -95,8 +95,20 @@ public class MainActivity extends AppCompatActivity {
                         String temp = jsonString.substring(index1_2+1, index2_2);
                         String hum = jsonString.substring(index1_3+1, index2_3);
                         String g_hum = jsonString.substring(index1_4+1, index2_4);
+                        int num_lux = Integer.parseInt(lux);
+                        String s_lux = "";
 
-                        mainActivity.lux.setText("조도 : " + lux);
+                        if(num_lux == 0) {
+                            s_lux = "꺼짐";
+                        }
+                        else if(num_lux == 1) {
+                            s_lux = "어두움";
+                        }
+                        else if(num_lux == 2) {
+                            s_lux = "밝음";
+                        }
+
+                        mainActivity.lux.setText("조도 : " + s_lux);
                         mainActivity.temp.setText("온도 : " + temp);
                         mainActivity.hum.setText("습도 : " + hum);
                         mainActivity.g_hum.setText("토양 습도 : " + g_hum);
