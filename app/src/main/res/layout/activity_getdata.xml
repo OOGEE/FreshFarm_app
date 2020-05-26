@@ -7,54 +7,57 @@
         android:id="@+id/GetSpin"
         android:entries="@array/machine_num"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.1"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true" />
 
     <TextView
         android:id="@+id/temp_text"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.4"
+        android:layout_height="40dp"
         android:layout_margin="15dp"
-        android:padding="15dp"
         android:maxLines="100"
-        android:text="출력공간"
+        android:text="온도 : "
+        android:textSize="30dp"
         android:singleLine="false"
         android:scrollbars="vertical"
+        android:textColor="#000000"
+        android:gravity="center_vertical"
         android:scrollHorizontally="false"/>
 
     <TextView
         android:id="@+id/hum_text"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.4"
+        android:layout_height="40dp"
         android:layout_margin="15dp"
-        android:padding="15dp"
         android:maxLines="100"
-        android:text="출력공간"
+        android:text="습도 : "
+        android:textSize="30dp"
         android:singleLine="false"
         android:scrollbars="vertical"
+        android:textColor="#000000"
+        android:gravity="center_vertical"
         android:scrollHorizontally="false"/>
 
     <TextView
         android:id="@+id/g_hum_text"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.4"
+        android:layout_height="40dp"
         android:layout_margin="15dp"
-        android:padding="15dp"
         android:maxLines="100"
-        android:text="출력공간"
+        android:text="토양습도 : "
+        android:textSize="30dp"
         android:singleLine="false"
         android:scrollbars="vertical"
+        android:textColor="#000000"
+        android:gravity="center_vertical"
         android:scrollHorizontally="false"/>
 
     <Button
         android:id="@+id/button_main_requestjson"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.2"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
         android:text="값 확인하기" />
 </LinearLayout>
