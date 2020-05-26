@@ -21,11 +21,11 @@ public class Getdata extends AppCompatActivity {
 
     public static final int LOAD_SUCCESS = 101;
 
-    private String SEARCH_URL = "http://175.208.85.188:8421/ANgetRecentData/";
+    private String SEARCH_URL = "http://175.208.85.188:8421/ARgetRecentData/";
     private String REQUEST_URL = SEARCH_URL;
 
     private ProgressDialog progressDialog;
-    private TextView temp_text, hum_text, g_hum_text;
+    private TextView lux_text, temp_text, hum_text, g_hum_text;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +33,7 @@ public class Getdata extends AppCompatActivity {
         setContentView(R.layout.activity_getdata);
 
         Button buttonRequestJSON = (Button)findViewById(R.id.button_main_requestjson);
+        lux_text = findViewById(R.id.lux_text);
         temp_text = findViewById(R.id.temp_text);
         hum_text = findViewById(R.id.hum_text);
         g_hum_text = findViewById(R.id.g_hum_text);
@@ -87,13 +88,29 @@ public class Getdata extends AppCompatActivity {
                         int index1_1 = jsonString.indexOf(":");
                         int index1_2 = jsonString.indexOf(":", index1_1+1);
                         int index1_3 = jsonString.indexOf(":", index1_2+1);
+                        int index1_4 = jsonString.indexOf(":", index1_3+1);
                         int index2_1 = jsonString.indexOf(",");
                         int index2_2 = jsonString.indexOf(",", index2_1+1);
-                        int index2_3 = jsonString.indexOf("}");
-                        String temp = jsonString.substring(index1_1+1, index2_1);
-                        String hum = jsonString.substring(index1_2+1, index2_2);
-                        String g_hum = jsonString.substring(index1_3+1, index2_3);
+                        int index2_3 = jsonString.indexOf(",", index2_2+1);
+                        int index2_4 = jsonString.indexOf("}");
+                        String lux = jsonString.substring(index1_1+1, index2_1);
+                        String temp = jsonString.substring(index1_2+1, index2_2);
+                        String hum = jsonString.substring(index1_3+1, index2_3);
+                        String g_hum = jsonString.substring(index1_4+1, index2_4);
+                        int num_lux = Integer.parseInt(lux);
+                        String s_lux = "";
 
+                        if(num_lux == 0) {
+                            s_lux = "꺼짐";
+                        }
+                        else if(num_lux == 1) {
+                            s_lux = "어두움";
+                        }
+                        else if(num_lux == 2) {
+                            s_lux = "밝음";
+                        }
+
+                        getdata.lux_text.setText("조도 : " + s_lux);
                         getdata.temp_text.setText("온도 : " + temp);
                         getdata.hum_text.setText("습도 : " + hum);
                         getdata.g_hum_text.setText("토양 습도 : " + g_hum);

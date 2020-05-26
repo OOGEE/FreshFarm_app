@@ -9,7 +9,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:text = "현재 설정 값 확인"
+        android:text = "현재 측정 값 확인"
         android:textSize="30dp"
         android:gravity="center_horizontal"
         android:textColor="#000000"
@@ -23,16 +23,6 @@
         android:layout_margin="10dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true" />
-
-    <TextView
-        android:id="@+id/main_lux"
-        android:layout_width="match_parent"
-        android:layout_margin="10dp"
-        android:textColor="#000000"
-        android:textSize="20dp"
-        android:text="조도 : "
-        android:gravity="center_vertical"
-        android:layout_height="40dp" />
 
     <TextView
         android:id="@+id/main_temp"
@@ -77,7 +67,7 @@
             android:layout_margin="10dp"
             android:layout_weight="0.1"
             android:onClick="onGetButtonClick"
-            android:text="측정 값 확인하기" />
+            android:text="설정 값 확인하기" />
 
         <Button
             android:id="@+id/button_push"
