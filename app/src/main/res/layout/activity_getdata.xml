@@ -6,7 +6,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:text = "현재 설정 값 확인"
+        android:text = "현재 제어 값 확인"
         android:textSize="30dp"
         android:gravity="center_horizontal"
         android:textColor="#000000"

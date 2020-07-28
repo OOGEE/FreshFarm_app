@@ -45,8 +45,14 @@ public class Postdata extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long id) {
 
-                if(adspin1.getItem(i).equals("양지식물")) {
-                    adspin2 = ArrayAdapter.createFromResource(Postdata.this, R.array.spinner_do_양지, android.R.layout.simple_spinner_dropdown_item);
+                if(adspin1.getItem(i).equals("상추")) {
+                    setillu = 2;
+                    et_temperature.setText("18");
+                    et_humidity.setText("80");
+                    et_ground_humidty.setText("80");
+
+
+                    adspin2 = ArrayAdapter.createFromResource(Postdata.this, R.array.spinner_do_상추, android.R.layout.simple_spinner_dropdown_item);
                     adspin2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                     spinner2.setAdapter(adspin2);
                     spinner2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -71,8 +77,12 @@ public class Postdata extends AppCompatActivity {
                     });
                 }
 
-                else if(adspin1.getItem(i).equals("음지식물")) {
-                    adspin2 = ArrayAdapter.createFromResource(Postdata.this, R.array.spinner_do_음지, android.R.layout.simple_spinner_dropdown_item);
+                else if(adspin1.getItem(i).equals("고사리")) {
+                    setillu = 1;
+                    et_temperature.setText("20");
+                    et_humidity.setText("85");
+                    et_ground_humidty.setText("85");
+                    adspin2 = ArrayAdapter.createFromResource(Postdata.this, R.array.spinner_do_고사리, android.R.layout.simple_spinner_dropdown_item);
                     adspin2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                     spinner2.setAdapter(adspin2);
                     spinner2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -97,6 +107,9 @@ public class Postdata extends AppCompatActivity {
                 }
 
                 else if(adspin1.getItem(i).equals("사용자설정")) {
+                    et_temperature.setText("");
+                    et_humidity.setText("");
+                    et_ground_humidty.setText("");
                     adspin2 = ArrayAdapter.createFromResource(Postdata.this, R.array.spinner_do_사용자, android.R.layout.simple_spinner_dropdown_item);
                     adspin2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                     spinner2.setAdapter(adspin2);
@@ -109,12 +122,9 @@ public class Postdata extends AppCompatActivity {
                                 setillu = 0;
                             }
                             else if(position == 2){
-                                setillu = 0;
-                            }
-                            else if(position == 3){
                                 setillu = 1;
                             }
-                            else if(position == 4){
+                            else if(position == 3){
                                 setillu = 2;
                             }
                         }

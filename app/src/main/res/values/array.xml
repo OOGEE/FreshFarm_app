@@ -2,17 +2,17 @@
 <resources>
     <string-array name="설정">
         <item>선택시스템</item>
-        <item>양지식물</item>
-        <item>음지식물</item>
+        <item>상추</item>
+        <item>고사리</item>
         <item>사용자설정</item>
     </string-array>
 
-    <string-array name = "spinner_do_양지">
+    <string-array name = "spinner_do_상추">
         <item>밝음</item>
         <item>어두움</item>
         <item>끔</item>
     </string-array>
-    <string-array name = "spinner_do_음지">
+    <string-array name = "spinner_do_고사리">
         <item>어두움</item>
         <item>끔</item>
         <item>밝음</item>

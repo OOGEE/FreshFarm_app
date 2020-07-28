@@ -67,7 +67,7 @@
             android:layout_margin="10dp"
             android:layout_weight="0.1"
             android:onClick="onGetButtonClick"
-            android:text="설정 값 확인하기" />
+            android:text="제어 값 확인하기" />
 
         <Button
             android:id="@+id/button_push"
@@ -76,7 +76,7 @@
             android:layout_margin="10dp"
             android:layout_weight="0.1"
             android:onClick="onPussButtonClick"
-            android:text="설정 값 입력하기" />
+            android:text="제어 값 입력하기" />
     </LinearLayout>
 
 
